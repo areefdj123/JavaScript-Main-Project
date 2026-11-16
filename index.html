@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <i class="icon nav-icon"><i style="font-size: 20px;" class="fa-solid fa-users"></i></i>
+      <h1>User Management Dashboard</h1>
+    </div>
+    <div class="nav-right">
+      <i class="icon code-icon"><i style="font-size: 20px;" class="fa-solid fa-code"></i></i>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section class="stats-grid">
+      <div class="stat-card total-users">
+        <div class="circle-icon">
+          <i class="icon"><i class="fa-solid fa-user-group" style="font-size: 20px;"></i></i>
+        </div>
+        <div class="stat-info">
+          <p id="total-user">Total Users</p>
+          <h2>6</h2>
+        </div>
+      </div>
+
+      <div class="stat-card cities-card">
+        <p class="section-label">Users in Each City</p>
+        <div class="city-pills">
+          <div class="pill">
+            <i class="icon"><i style="color: rgb(57, 57, 255); font-size: 16px;" class="fa-solid fa-location-dot"></i></i>
+            <p class="city-name">Karachi</p>
+            <strong class="count">1</strong>
+          </div>
+          <div class="pill">
+            <i class="icon"><i style="color: rgb(57, 57, 255); font-size: 16px;" class="fa-solid fa-location-dot"></i></i>
+            <p class="city-name">Lahore</p>
+            <strong class="count">1</strong>
+          </div>
+          <div class="pill">
+            <i class="icon"><i style="color: rgb(57, 57, 255); font-size: 16px;" class="fa-solid fa-location-dot"></i></i>
+            <p class="city-name">Faislabad</p>
+            <strong class="count">1</strong>
+          </div>
+          <div class="pill more-pill">
+            <i class="icon"><i style="color: rgb(57, 57, 255); font-size: 16px;" class="fa-solid fa-signal"></i></i>
+            <p class="city-name">+7 more cities...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls-bar">
+      <div class="controls-left">
+        <div class="search-box">
+          <i class="icon"><i class="fa-solid fa-magnifying-glass"></i></i>
+          <input type="text" placeholder="Search by name...">
+        </div>
+        <button class="btn-sort active">
+          <i class="icon"><i class="fa-solid fa-filter"></i></i> A to Z
+        </button>
+        <button class="btn-sort">
+          <i class="icon"><i class="fa-solid fa-arrow-down-wide-short"></i></i> Z to A
+        </button>
+      </div>
+      <button class="btn-primary">
+        <i class="icon"><i class="fa-solid fa-plus"></i></i> Add New User
+      </button>
+    </section>
+
+    <section class="users-grid">
+
+      <div class="user-card">
+        <div class="card-top">
+          <div class="avatar">AD</div>
+          <div class="user-info">
+            <h3>Areef Dansih</h3>
+            <p><i class="icon"><i class="fa-solid fa-envelope"></i></i> areef@example.com</p>
+            <p><i class="icon"><i class="fa-solid fa-phone"></i></i> +92 321456789</p>
+            <p><i class="icon"><i class="fa-solid fa-location-dot"></i></i> Karachi</p>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button onclick="showmodalbox()" class="btn-view"><i class="icon"><i class="fa-solid fa-eye"></i></i> View Details</button>
+          <button class="btn-delete"><i class="icon"><i class="fa-solid fa-trash"></i></i> Delete</button>
+        </div>
+      </div>
+
+      <div class="user-card">
+        <div class="card-top">
+          <div class="avatar">RD</div>
+          <div class="user-info">
+            <h3>Rayyan Danish</h3>
+            <p><i class="icon"><i class="fa-solid fa-envelope"></i></i> rayyan@example.com</p>
+            <p><i class="icon"><i class="fa-solid fa-phone"></i></i> +92 321456789</p>
+            <p><i class="icon"><i class="fa-solid fa-location-dot"></i></i> Rawalpindi</p>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button onclick="showmodalbox()" class="btn-view"><i class="icon"><i class="fa-solid fa-eye"></i></i> View Details</button>
+          <button class="btn-delete"><i class="icon"><i class="fa-solid fa-trash"></i></i> Delete</button>
+        </div>
+      </div>
+
+      <div class="user-card">
+        <div class="card-top">
+          <div class="avatar">JA</div>
+          <div class="user-info">
+            <h3>Jalil Ahmed</h3>
+            <p><i class="icon"><i class="fa-solid fa-envelope"></i></i> jalil@example.com</p>
+            <p><i class="icon"><i class="fa-solid fa-phone"></i></i> +92 321456789</p>
+            <p><i class="icon"><i class="fa-solid fa-location-dot"></i></i> Faislabad</p>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button onclick="showmodalbox()" class="btn-view"><i class="icon"><i class="fa-solid fa-eye"></i></i> View Details</button>
+          <button class="btn-delete"><i class="icon"><i class="fa-solid fa-trash"></i></i> Delete</button>
+        </div>
+      </div>
+
+      <div class="user-card">
+        <div class="card-top">
+          <div class="avatar">RA</div>
+          <div class="user-info">
+            <h3>Rameez Ahmed</h3>
+            <p><i class="icon"><i class="fa-solid fa-envelope"></i></i> rameez@example.com</p>
+            <p><i class="icon"><i class="fa-solid fa-phone"></i></i> +92 321456789</p>
+            <p><i class="icon"><i class="fa-solid fa-location-dot"></i></i> Lahore</p>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button onclick="showmodalbox()" class="btn-view"><i class="icon"><i class="fa-solid fa-eye"></i></i> View Details</button>
+          <button class="btn-delete"><i class="icon"><i class="fa-solid fa-trash"></i></i> Delete</button>
+        </div>
+      </div>
+
+      <div class="user-card">
+        <div class="card-top">
+          <div class="avatar">AA</div>
+          <div class="user-info">
+            <h3>Aman Akhtar</h3>
+            <p><i class="icon"><i class="fa-solid fa-envelope"></i></i> aman@example.com</p>
+            <p><i class="icon"><i class="fa-solid fa-phone"></i></i> +92 321456789</p>
+            <p><i class="icon"><i class="fa-solid fa-location-dot"></i></i> Multan</p>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button onclick="showmodalbox()" class="btn-view"><i class="icon"><i class="fa-solid fa-eye"></i></i> View Details</button>
+          <button class="btn-delete"><i class="icon"><i class="fa-solid fa-trash"></i></i> Delete</button>
+        </div>
+      </div>
+
+      <div class="user-card">
+        <div class="card-top">
+          <div class="avatar">MW</div>
+          <div class="user-info">
+            <h3>Mirza Wahaj</h3>
+            <p><i class="icon"><i class="fa-solid fa-envelope"></i></i> wahaj@example.com</p>
+            <p><i class="icon"><i class="fa-solid fa-phone"></i></i> +92 321456789</p>
+            <p><i class="icon"><i class="fa-solid fa-location-dot"></i></i> Balochistan</p>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button onclick="showmodalbox()" class="btn-view"><i class="icon"><i class="fa-solid fa-eye"></i></i> View Details</button>
+          <button class="btn-delete"><i class="icon"><i class="fa-solid fa-trash"></i></i> Delete</button>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="add-user-section">
+      <div class="add-user-header">
+        <i class="icon"><i class="fa-solid fa-plus"></i></i>
+        <h3>Add New User</h3>
+      </div>
+      <form class="add-user-form">
+        <div class="input-group">
+          <i class="icon"><i class="fa-solid fa-user"></i></i>
+          <input type="text" placeholder="Name">
+        </div>
+        <div class="input-group">
+          <i class="icon"><i class="fa-solid fa-envelope"></i></i>
+          <input type="email" placeholder="Email">
+        </div>
+        <div class="input-group">
+          <i class="icon"><i class="fa-solid fa-phone"></i></i>
+          <input type="tel" placeholder="Phone">
+        </div>
+        <div class="input-group">
+          <i class="icon"><i class="fa-solid fa-location-dot"></i></i>
+          <input type="text" placeholder="City">
+        </div>
+        <button type="submit" class="btn-success">
+          <i class="icon"><i class="fa-solid fa-plus"></i></i> Add User
+        </button>
+      </form>
+    </section>
+
+  </div>
+<div class="modalboxcontainer">
+    <div class="modalbox">
+        <div class="modalbox-heading">
+            <h1 class="modal-heading">User Details</h1>
+            <i onclick="hidemodalbox()" id="modalicon" class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="modalbox-card-top">
+            <div class="avatar">AD</div>
+            <div class="modalbox-username">
+                <h3>Areef Danish</h3>
+                <p>Web Development</p>
+            </div>
+        </div>
+            <div class="modalbox-userinfo">
+                <p><i class="icon"><i class="fa-solid fa-envelope"></i> </i>areef@example.com</p>
+                <p><i class="icon"><i class="fa-solid fa-phone"></i> </i>+92 321456789</p>
+                <p><i class="icon"><i class="fa-solid fa-location-dot"> </i></i>Karachi</p>
+            </div>
+            <div class="user-additional-info">
+                <h3 id="additional-info-heading">Addition Information:</h3>
+                <p id="para1"><b>User Id: </b>1</p>
+                <p id="para2"><b>Company: </b>Mentor Health</p>
+            </div>
+    </div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
