@@ -367,18 +367,20 @@ body {
     /* width: 200px; */
     /* height: 200px; */
     /* display: flex; */
-    display: flex;
-    flex-direction: column;
+    display: none;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    z-index: 999;
-    position: relative;
+    z-index: 9999;
+    position: fixed;
     bottom: 500px;
+    inset: 0;
 }
 .modalbox{
      /* width: 200px; */
      /* height: 200px;   */
-     display: none;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.54);
     border-radius: 10px;
@@ -494,5 +496,8 @@ body {
 
   .card-actions {
     flex-direction: column;
+  }
+  .modalbox{
+    width: 300px;
   }
 }
